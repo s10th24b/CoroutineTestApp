@@ -2,11 +2,19 @@ package com.example.coroutinetestapp.utils
 
 import android.util.Log
 
-class DevTool {
+object DevTool {
     fun logD(msg: String) {
-        Log.d("KHJ",msg)
+        Log.d("KHJ", msg)
     }
+
     fun logE(msg: String) {
-        Log.e("KHJ",msg)
+        Log.e("KHJ", msg)
+    }
+
+    fun printCurrentThread(tag: String = "default") {
+        println("Running in tag:$tag ${Thread.currentThread().name}")
+    }
+    fun logCurrentThread(tag: String = "default") {
+        logD("Running in tag:$tag Thread[${Thread.currentThread().name}]")
     }
 }

@@ -61,5 +61,7 @@ dependencies {
 
 
     // coroutine
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3'
+    def coroutines_version = "1.4.3"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
 }
