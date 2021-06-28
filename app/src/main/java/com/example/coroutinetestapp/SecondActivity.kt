@@ -41,6 +41,7 @@ class SecondActivity : AppCompatActivity() {
         requests.forEach { it.await() }
         val headlines = requests.flatMap { // flatMap 은 항상 헷갈린다...
             it.getCompleted() // getcompleted() 이거 뭐지..
+
         }
         logD(headlines.toString())
         GlobalScope.launch(Dispatchers.Main) {
