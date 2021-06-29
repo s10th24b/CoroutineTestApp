@@ -46,6 +46,7 @@ class SecondActivity : AppCompatActivity() {
         logD(headlines.toString())
         GlobalScope.launch(Dispatchers.Main) {
             binding.secondTextView.text = "Found ${headlines.size} News in ${requests.size} feeds"
+            logD("secondTextView text changed")
         }
     }
 
